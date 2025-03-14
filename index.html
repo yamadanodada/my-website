@@ -116,6 +116,26 @@
         });
     });
 </script>
+/* ハンバーガーメニューの位置とデザイン調整 */
+.menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 15px; /* ← 位置を調整（数値を増減して調整可） */
+    right: 20px; /* ← 右端に寄せすぎないよう調整 */
+    background: rgba(0, 0, 0, 0.7); /* 背景をつけると見やすくなる */
+    padding: 10px 15px; /* アイコンが切れないように余白を追加 */
+    border-radius: 5px; /* 角を少し丸くする */
+    color: white; /* アイコンの色を白に */
+    z-index: 1001; /* 他の要素より上に表示 */
+}
 
+.menu-icon:hover {
+    background: rgba(0, 0, 0, 0.9); /* ホバー時に濃くする */
+}
+
+    
+    
 </body>
 </html>

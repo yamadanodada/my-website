@@ -243,19 +243,16 @@ img {
     height: auto;
 }
 
-/* ハンバーガーメニューの位置とデザイン調整 */
 .menu-icon {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute; /* ← ここを fixed から absolute に変更 */
-    top: 15px;
-    right: 20px;
+    position: absolute; /* 画面内に収めるために fixed ではなく absolute */
+    top: 15px; /* 上から15px */
+    right: 10px; /* 端に寄りすぎないよう10pxに調整 */
     background: rgba(0, 0, 0, 0.7);
-    padding: 10px 15px;
+    padding: 10px 15px; /* 余白を増やして、見切れを防ぐ */
     border-radius: 5px;
+    font-size: 2rem;
     color: white;
-    z-index: 1001; /* 他の要素より上に表示 */
+    z-index: 2000; /* すべての要素より前面に */
 }
 
 .menu-icon {

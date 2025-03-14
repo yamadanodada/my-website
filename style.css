@@ -167,3 +167,60 @@ body {
     background: url('background.jpg') center/cover fixed;
     color: white;
 }
+
+/* 🌟 レスポンシブデザイン（スマホ対応） 🌟 */
+@media (max-width: 768px) {
+    /* ナビゲーションをハンバーガーメニューに */
+    nav ul {
+        display: none; /* デフォルトで非表示 */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex; /* メニュー開いた時 */
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    /* セクションのサイズ調整 */
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    /* フォームの調整 */
+    form input, form textarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: 12px 16px;
+    }
+}

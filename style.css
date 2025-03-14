@@ -162,3 +162,8 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
+
+body {
+    background: url('background.jpg') center/cover fixed;
+    color: white;
+}

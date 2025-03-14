@@ -248,14 +248,18 @@ img {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    position: fixed;
-    top: 15px; /* ← 位置を調整（数値を増減して調整可） */
-    right: 20px; /* ← 右端に寄せすぎないよう調整 */
-    background: rgba(0, 0, 0, 0.7); /* 背景をつけると見やすくなる */
-    padding: 10px 15px; /* アイコンが切れないように余白を追加 */
-    border-radius: 5px; /* 角を少し丸くする */
-    color: white; /* アイコンの色を白に */
+    position: absolute; /* ← ここを fixed から absolute に変更 */
+    top: 15px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
     z-index: 1001; /* 他の要素より上に表示 */
+}
+
+.menu-icon {
+    z-index: 2000; /* これで確実に前面に表示 */
 }
 
 .menu-icon:hover {

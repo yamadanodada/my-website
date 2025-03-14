@@ -224,3 +224,8 @@ body {
         padding: 12px 16px;
     }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}

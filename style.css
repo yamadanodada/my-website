@@ -1,7 +1,7 @@
 /* Googleフォントを追加 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* 全体の背景とフォント */
+/* 全体のデザイン */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
@@ -9,63 +9,114 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+}
+
+/* ヘッダー */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 20px;
 }
 
-/* 中央に配置するコンテンツエリア */
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* セクション共通デザイン */
+.section {
+    padding: 100px 20px;
+    margin-top: 60px;
+}
+
 .container {
+    max-width: 800px;
+    margin: 0 auto;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    width: 60%;
-    max-width: 500px;
     padding: 30px;
+    border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease-in-out;
 }
 
-.container:hover {
-    transform: translateY(-5px);
-}
-
-/* 見出し */
-h1 {
-    color: #ffffff;
+h2 {
     font-size: 2.5em;
     font-weight: 600;
-    text-transform: uppercase;
     margin-bottom: 15px;
+    color: #ffcc00;
 }
 
-/* 段落のスタイル */
 p {
     font-size: 1.2em;
     color: #e0e0e0;
     line-height: 1.6;
 }
 
-/* ボタン風リンク */
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 50px;
+/* 社長の写真 */
+.ceo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
-    transition: all 0.3s ease-in-out;
 }
 
-.btn:hover {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
-    transform: scale(1.1);
-    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.7);
+/* フォーム */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6b800;
+}
+
+/* フッター */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
 }

@@ -246,7 +246,7 @@ img {
 .menu-icon {
     position: absolute; /* 画面内に収めるために fixed ではなく absolute */
     top: 15px; /* 上から15px */
-    right: 15px; /* 端に寄りすぎないよう15pxに調整 */
+    right: 30px; /* 端に寄りすぎないよう30pxに調整 */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px 15px; /* 余白を増やして、見切れを防ぐ */
     border-radius: 5px;

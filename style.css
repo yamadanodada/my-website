@@ -246,7 +246,7 @@ img {
 .menu-icon {
     position: absolute; /* 画面内に収めるために fixed ではなく absolute */
     top: 15px; /* 上から15px */
-    right: 10px; /* 端に寄りすぎないよう10pxに調整 */
+    right: 15px; /* 端に寄りすぎないよう15pxに調整 */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px 15px; /* 余白を増やして、見切れを防ぐ */
     border-radius: 5px;
@@ -254,6 +254,11 @@ img {
     color: white;
     z-index: 2000; /* すべての要素より前面に */
 }
+
+.menu-icon {
+    padding: 15px 20px; /* 横の余白を増やして、見切れを防ぐ */
+}
+
 
 .menu-icon {
     z-index: 2000; /* これで確実に前面に表示 */

@@ -1,25 +1,26 @@
-/* Googleフォントを追加 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Googleフォントを適用 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-/* 全体のデザイン */
+/* 全体のデザインをモダンに */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #ffffff;
-    text-align: center;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* ヘッダー */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: background 0.3s;
 }
 
 header h1 {
@@ -44,11 +45,57 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    background: #ff4081;
+    color: #fff;
+}
+
+/* ヒーローセクション */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('hero-bg.jpg') center/cover;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff4081;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #ff79b0;
+    transform: scale(1.05);
 }
 
 /* セクション共通デザイン */
@@ -69,22 +116,14 @@ nav ul li a:hover {
 h2 {
     font-size: 2.5em;
     font-weight: 600;
+    color: #ff4081;
     margin-bottom: 15px;
-    color: #ffcc00;
 }
 
 p {
     font-size: 1.2em;
     color: #e0e0e0;
     line-height: 1.6;
-}
-
-/* 社長の写真 */
-.ceo-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
 }
 
 /* フォーム */
@@ -95,10 +134,12 @@ form input, form textarea {
     border-radius: 5px;
     border: none;
     font-size: 1em;
+    background: #333;
+    color: white;
 }
 
 button {
-    background: #ffcc00;
+    background: #ff4081;
     color: black;
     padding: 10px 20px;
     border: none;
@@ -111,12 +152,13 @@ button {
 }
 
 button:hover {
-    background: #e6b800;
+    background: #ff79b0;
+    transform: scale(1.05);
 }
 
 /* フッター */
 footer {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     margin-top: 20px;
 }

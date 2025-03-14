@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社タカハシ - 公式サイト</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,11 +26,11 @@
     <section id="about" class="section">
         <div class="container">
             <h2>会社概要</h2>
-            <p>株式会社タカハシは、革新的な技術とサービスで未来を創造する企業です。創業以来、私たちは「技術の力で世界を変える」をモットーに、さまざまな業界に向けて最先端のソリューションを提供しています。</p>
+            <p>株式会社タカハシは、「愛」と「楽しさ」を追求する大人のためのエンターテイメント企業です。我々は、高品質でユニークな大人のおもちゃを開発・販売し、笑顔あふれる生活をサポートします！</p>
             <ul class="company-info">
-                <li><strong>設立:</strong> 2010年</li>
-                <li><strong>所在地:</strong> 東京都新宿区</li>
-                <li><strong>従業員数:</strong> 200名</li>
+                <li><strong>設立:</strong> 1993年</li>
+                <li><strong>所在地:</strong> 東京都</li>
+                <li><strong>従業員数:</strong> 1名</li>
             </ul>
         </div>
     </section>
@@ -36,11 +38,11 @@
     <section id="services" class="section">
         <div class="container">
             <h2>事業内容</h2>
-            <p>私たちの事業は以下の3つの柱で構成されています：</p>
+            <p>私たちは、以下の事業を展開しています：</p>
             <ul class="services-list">
-                <li><strong>ITソリューション:</strong> クラウド技術を活用したシステム開発</li>
-                <li><strong>AI開発:</strong> 人工知能を用いたデータ分析と業務自動化</li>
-                <li><strong>コンサルティング:</strong> 企業のDX推進を支援</li>
+                <li><strong>オリジナル製品開発:</strong> 最高品質の素材を使用し、心も体も満たされる商品を提供</li>
+                <li><strong>カスタムオーダー:</strong> お客様のニーズに合わせたオーダーメイドサービス</li>
+                <li><strong>サブスクリプションサービス:</strong> 毎月新しいワクワクをお届け</li>
             </ul>
         </div>
     </section>
@@ -49,22 +51,22 @@
         <div class="container">
             <h2>社長メッセージ</h2>
             <img src="ceo.jpg" alt="社長 タカハシ" class="ceo-img">
-            <p>「技術で世界を変える」— それが私たちのビジョンです。<br>
-            創業以来、私たちはテクノロジーの力で社会に貢献することを使命とし、挑戦を続けてきました。お客様と共に未来を築くことを誇りに思い、新しい価値を創造するために日々努力しています。<br><br>
-            皆様と共に、より良い未来を築いていきましょう。</p>
-            <p><strong>株式会社タカハシ 代表取締役 高橋 一郎</strong></p>
+            <p>「愛と刺激をすべての人に」— これが私たちの使命です。<br>
+            創業以来、私たちは「楽しさ」と「満足感」を追求し、最高の体験を提供してきました。<br>
+            仕事に疲れたあなたも、刺激が欲しいあなたも、ぜひタカハシの製品をお試しください。きっと、世界が変わるはずです。</p>
+            <p><strong>株式会社タカハシ 代表取締役 タカハシ</strong></p>
         </div>
     </section>
     
     <section id="contact" class="section">
         <div class="container">
             <h2>お問い合わせ</h2>
-            <p>お問い合わせは以下のフォームよりご連絡ください。</p>
+            <p>「こんな商品が欲しい！」そんなアイデアも大歓迎です。お気軽にお問い合わせください。</p>
             <form>
                 <input type="text" placeholder="お名前" required>
                 <input type="email" placeholder="メールアドレス" required>
                 <textarea placeholder="お問い合わせ内容" required></textarea>
-                <button type="submit">送信</button>
+                <button type="submit" class="btn">送信</button>
             </form>
         </div>
     </section>
@@ -75,5 +77,31 @@
             <p>所在地: 東京都新宿区 | 電話: 03-XXXX-XXXX | Email: info@takahashi.co.jp</p>
         </div>
     </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".section", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".section",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.to("body", {
+            backgroundPosition: "0% 50%",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: true
+            }
+        });
+    </script>
 </body>
 </html>

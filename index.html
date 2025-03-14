@@ -103,5 +103,19 @@
             }
         });
     </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.createElement("div");
+        menuIcon.classList.add("menu-icon");
+        menuIcon.innerHTML = "☰";
+        document.querySelector("header").appendChild(menuIcon);
+
+        menuIcon.addEventListener("click", function() {
+            document.querySelector("nav ul").classList.toggle("active");
+        });
+    });
+</script>
+
 </body>
 </html>
